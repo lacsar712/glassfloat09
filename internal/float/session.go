@@ -27,5 +27,5 @@ func (s *LiveSession) Value() int {
 func CloneSession(s *LiveSession) *LiveSession {
 	s.mu.Lock()
 	defer s.mu.Unlock()
-	return &LiveSession{label: s.label}
+	return &LiveSession{label: s.label, n: s.n}
 }
